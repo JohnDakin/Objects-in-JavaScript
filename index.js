@@ -169,8 +169,50 @@ console.log(obj5.b.c);
 console.log(obj3.b.c);
 
 
-//entries
+//entries - translate an object to an array
 const myObj = {
   a: "tapas",
   b: 32,
 }
+
+const myArr = Object.entries(myObj);
+console.log(myArr);
+
+const entries = new Map([
+  ["foo", "bar"],
+  ["baz", 42],
+]);
+
+const objEntries = Object.fromEntries(entries);
+console.log(objEntries);
+
+//static methods in objects 
+//they enforce immutability
+const emp = {
+  sal: 100
+}
+
+Object.freeze(emp);
+
+emp.sal = 200;
+emp.name = "Alex";
+delete emp.name;
+
+console.log(emp);
+
+console.log(Object.isFrozen(emp));
+
+const dept = {
+  name: "finance"
+}
+
+Object.seal(dept);
+
+dept.address = "Bangalore";
+delete dept.name;
+
+dept.name = "hr";
+
+console.log(dept);
+
+console.log(Object.hasOwn(dept, "address"));
