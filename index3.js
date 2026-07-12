@@ -64,7 +64,7 @@ for(let job in band){
 }
 
 //destructuring objects
-//myVariable, myBass is an alias syntax = {}
+//myVariable, myBass is an alias syntax = {keyName: aliasName}
 const {guitar: myVariable, bass: myBass} = band;
 console.log(myVariable);
 console.log(myBass);
