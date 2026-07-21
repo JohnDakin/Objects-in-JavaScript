@@ -33,7 +33,7 @@ const me = {
   age: 22,
   my_course: "Computer Science",
   message(){
-    return `Hi i'm ${f_name} ${l_name} and i love Computer Science`;
+    return `Hi i'm ${f_name} ${l_name} and i love ${this.my_course}`;
   },
   family: {
     father: 'Romlus',
@@ -49,7 +49,7 @@ console.log(f_name);
 console.log(l_name);
 console.log(brother);
 console.log(brother.length);
-console.log(message())
+console.log(message.call(me))
 
 // Object.freeze(me);
 Object.seal(me);
